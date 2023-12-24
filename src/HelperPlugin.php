@@ -1,6 +1,7 @@
 <?php namespace Anomaly\HelperPlugin;
 
 use Anomaly\Streams\Platform\Addon\Plugin\Plugin;
+use Twig\TwigFunction;
 
 /**
  * Class HelperPlugin
@@ -97,11 +98,11 @@ class HelperPlugin extends Plugin
         array_walk(
             $this->functions,
             function (&$value, $key) {
-                $value = new \Twig_SimpleFunction($key, $key, $value);
+                $value = new TwigFunction($key, $key, $value);
             }
         );
 
-        $this->functions[] = new \Twig_SimpleFunction(
+        $this->functions[] = new TwigFunction(
             'parse_str',
             function ($string) {
                 $array = [];
