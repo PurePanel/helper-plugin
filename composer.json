@@ -1,5 +1,5 @@
 {
-    "name": "anomaly/helper-plugin",
+    "name": "purepanel/helper-plugin",
     "type": "streams-addon",
     "description": "A plugin that provides numerous helpful PHP functions.",
     "keywords": [
